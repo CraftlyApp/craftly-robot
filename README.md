@@ -44,17 +44,6 @@ Craftly Robot is a lightweight command-line tool for managing codebases at scale
     ! To revert back, run: python3 craftly_robot.py -i instructions/sample.json --undo
     ```
 
-3.  **Handling Failures**
-
-    If an instruction fails, the robot stops and shows you exactly where the error occurred. It still creates a backup of the steps that succeeded, so you can easily revert back.
-
-    **Output on Failure:**
-    ```bash
-    ✓ [1/3] created folder: my_project
-    ✗ [2/3] Missing parent folder: non_existent_dir
-    ! To revert back, run: python3 craftly_robot.py -i instructions/sample.json --undo
-    ```
-
 ---
 
 ## ⚙️ CLI Arguments
