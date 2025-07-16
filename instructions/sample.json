@@ -1,19 +1,60 @@
 [
   {
     "operation": "create",
+    "mode": "folder",
+    "path": ["my_project"]
+  },
+  {
+    "operation": "create",
+    "mode": "folder",
+    "path": ["temp_folder"]
+  },
+  {
+    "operation": "delete",
+    "mode": "folder",
+    "path": ["temp_folder"]
+  },
+  {
+    "operation": "create",
     "mode": "file",
-    "path": [
-      "hello.py"
-    ]
+    "path": ["temp.txt"]
+  },
+  {
+    "operation": "delete",
+    "mode": "file",
+    "path": ["temp.txt"]
+  },
+  {
+    "operation": "create",
+    "mode": "file",
+    "path": ["my_project/hello.py"],
+    "content": "# Starter file\\n"
   },
   {
     "operation": "create",
     "mode": "line",
-    "path": [
-      "hello.py"
-    ],
+    "path": ["my_project/hello.py"],
     "content": {
-      "1": "print(\"Hello, World!\")"
+      "1": "#!/usr/bin/env python3",
+      "2": "def main():",
+      "3": "    print(\"Hello, World!\")",
+      "4": "",
+      "5": "if __name__ == \"__main__\":",
+      "6": "    main()"
+    }
+  },
+  {
+    "operation": "delete",
+    "mode": "line",
+    "path": ["my_project/hello.py"],
+    "content": [4]
+  },
+  {
+    "operation": "create",
+    "mode": "line",
+    "path": ["my_project/hello.py"],
+    "content": {
+      "4": ""
     }
   }
 ]
