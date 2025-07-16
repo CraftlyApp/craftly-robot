@@ -38,25 +38,17 @@ Craftly Robot is a lightweight command-line tool for managing codebases at scale
 
     **Output on Success:**
     ```bash
-    ✓ [1/19] created folder: my_project
-    ✓ [2/19] created folder: my_project/tests
-    ✓ [3/19] created file: my_project/hello.py
-    ✓ [4/19] created file: my_project/tests/test_hello.py
-    ✓ [5/19] added line: 1 #!/usr/bin/env python3
-    ✓ [6/19] added line: 2 def main():
-    ✓ [7/19] added line: 3 print("Hello, World!")
-    ✓ [8/19] added line: 4 
-    ✓ [9/19] added line: 5 if __name__ == "__main__":
-    ✓ [10/19] added line: 6 main()
-    ✓ [11/19] added line: 1 import subprocess
-    ✓ [12/19] added line: 2 
-    ✓ [13/19] added line: 3 result = subprocess.run(["python3", "../hello.py"], capture_output=True)
-    ✓ [14/19] added line: 4 assert result.stdout.strip() == b"Hello, World!"
-    ✓ [15/19] added line: 5 print("Test passed!")
-    ✓ [16/19] removed line: 2 
-    ✓ [17/19] added line: 2 
-    ✓ [18/19] deleted file: my_project/tests/test_hello.py
-    ✓ [19/19] deleted folder: my_project/tests
+    ✓ [1/11] created folder: my_project
+    ✓ [2/11] created folder: trash_dir
+    ✓ [3/11] deleted folder: trash_dir
+    ✓ [4/11] created file: my_project/hello.py
+    ✓ [5/11] added line: 1 #!/usr/bin/env python3
+    ✓ [6/11] added line: 2 def main():
+    ✓ [7/11] added line: 3 print("Hello, World!")
+    ✓ [8/11] added line: 4 
+    ✓ [9/11] added line: 5 if __name__ == "__main__":
+    ✓ [10/11] added line: 6 main()
+    ✓ [11/11] removed line: 4 
     ! To revert back, run: python3 craftly_robot.py -i instructions/sample.json --undo
     ```
 
