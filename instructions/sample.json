@@ -1,0 +1,19 @@
+[
+  {
+    "operation": "create",
+    "mode": "file",
+    "path": [
+      "hello.py"
+    ]
+  },
+  {
+    "operation": "create",
+    "mode": "line",
+    "path": [
+      "hello.py"
+    ],
+    "content": {
+      "1": "print(\"Hello, World!\")"
+    }
+  }
+]
