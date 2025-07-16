@@ -2,7 +2,7 @@
 
 # Craftly Robot
 
-Craftly Robot is a lightweight command-line tool for managing codebases at scale. Need to set up project structure, or edit and modify files in a large codebase? Just describe it in a JSON file, and let Craftly Robot handle it for you.
+Craftly Robot is a lightweight command-line tool for managing codebases at scale. Need to set up project structure, or edit and modify files in a large codebase? Just describe it in a JSON file, and let Craftly Robot handle it for you. All operations are fully reversible with a single command.
 
 ---
 
@@ -71,16 +71,6 @@ Craftly Robot is a lightweight command-line tool for managing codebases at scale
 | :-------- | :---- | :------- | :----------------------------------------- |
 | `--input` | `-i`  | Yes      | Path to the JSON instruction file.         |
 | `--undo`  |       | No       | Reverts the changes using the backup file. |
-
----
-
-## 🛡️ Backup and Undo Feature
-
-Craftly Robot is built to be safe and easily reversible.
-
-*   **Automatic Backups**: The robot automatically creates a backup of all **completed** actions on every run. This allows you to undo the changes whether the entire run succeeded or failed midway.
-*   **Hidden Backup Directory**: Backups are stored in a hidden `.backup/` directory. For an input file like `instructions/sample.json`, the backup will be saved as `.backup/sample.bak`.
-*   **Reverting Changes**: The `--undo` flag reads the corresponding `.bak` file, executes the reverse actions, and restores your files to their previous state. After a successful undo, the backup file is automatically deleted.
 
 ---
 
