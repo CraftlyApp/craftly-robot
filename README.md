@@ -26,7 +26,7 @@ Craftly Robot is a lightweight command-line tool for managing codebases at scale
 
 1.  **Prepare an instruction JSON**
 
-    Craftly Robot operates based on a set of instructions described in a JSON file. A sample is in the `instructions` folder.
+    Craftly Robot operates based on a set of instructions described in a JSON file. A sample is in the [instructions](instructions) folder.
 
 2.  **Run Craftly Robot**
 
