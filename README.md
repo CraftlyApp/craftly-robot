@@ -30,7 +30,7 @@ Craftly Robot is a lightweight command-line tool for managing codebases at scale
 
 2.  **Run Craftly Robot**
 
-    This command executes the instructions. On every run, it creates a hidden backup file of the completed steps.
+    This command executes the instructions.
 
     ```bash
     python3 craftly_robot.py -i instructions/sample.json
@@ -46,21 +46,13 @@ Craftly Robot is a lightweight command-line tool for managing codebases at scale
 
 3.  **Handling Failures**
 
-    If an instruction fails, the robot stops and shows you exactly where the error occurred. It still creates a backup of the steps that succeeded, so you can easily clean up.
+    If an instruction fails, the robot stops and shows you exactly where the error occurred. It still creates a backup of the steps that succeeded, so you can easily revert back.
 
     **Output on Failure:**
     ```bash
     ✓ [1/3] created folder: my_project
     ✗ [2/3] Missing parent folder: non_existent_dir
     ! To revert back, run: python3 craftly_robot.py -i instructions/sample.json --undo
-    ```
-
-4.  **Undo the Changes**
-
-    Whether the run was a full success or a partial failure, you can always revert the changes with the `--undo` flag.
-
-    ```bash
-    python3 craftly_robot.py -i instructions/sample.json --undo
     ```
 
 ---
@@ -115,7 +107,6 @@ Each instruction object must include three keys:
     *   Non-empty folders on `delete_folder`
     *   Invalid line numbers
     *   JSON syntax issues
-*   When an error occurs, the robot stops immediately after printing the error. It saves a backup of any steps that succeeded, allowing you to revert the partial changes easily.
 
 ---
 
