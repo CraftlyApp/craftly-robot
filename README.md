@@ -36,9 +36,9 @@ Craftly Robot is a lightweight command-line tool for managing codebases at scale
 3. **Observe the output**
 
    ```bash
-   ✓ [1/4] Created folder: my_project
-   ✓ [2/4] Created file: my_project/hello.txt
-   ✓ [3/4] Inserted line at line 1: my_project/hello.txt
+   ✓ [1/3] Created folder: my_project
+   ✓ [2/3] Created file: my_project/hello.txt
+   ✓ [3/3] Inserted line at line 1: my_project/hello.txt
    ```
 
 ---
@@ -103,4 +103,3 @@ Contributions, feedback, and bug reports are welcome! Please fork the repo and o
 ## 📄 License
 
 This project is licensed under the MIT License. See [LICENSE](LICENSE) for details.
-
