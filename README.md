@@ -79,52 +79,6 @@ Each instruction is a single JSON object with the following keys:
 
 ---
 
-## ✅ Operation Examples
-
-### Folder Operations
-*   The value for `path` is always a list.
-    ```json
-    {
-      "operation": "create",
-      "mode": "folder",
-      "path": ["./src", "./tests"]
-    }
-    ```
-
-### File Operations
-*   The value for `path` is always a list.
-    ```json
-    {
-      "operation": "create",
-      "mode": "file",
-      "path": ["main.py", "README.md"]
-    }
-    ```
-
-### Line Operations
-*   **Create Lines**: The `content` value is a **dictionary** of `{"line_number": "content_string"}`. These edits are applied to all files in the `path` list.
-    ```json
-    {
-      "operation": "create",
-      "mode": "line",
-      "path": ["main.py", "utils.py"],
-      "content": {
-        "1": "#!/usr/bin/python3"
-      }
-    }
-    ```
-*   **Delete Lines**: The `content` value is an **array** of line numbers. These lines are removed from all files in the `path` list.
-    ```json
-    {
-      "operation": "delete",
-      "mode": "line",
-      "path": ["main.py"],
-      "content": [2, 7, 10]
-    }
-    ```
-
----
-
 ## ⚠️ Error Handling
 
 *   Throws descriptive errors on:
