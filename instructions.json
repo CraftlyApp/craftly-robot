@@ -1,0 +1,26 @@
+[
+  {
+    "operation": "create",
+    "mode": "folder",
+    "path": "my_project"
+  },
+  {
+    "operation": "create",
+    "mode": "file",
+    "path": "my_project/hello.txt"
+  },
+  {
+    "operation": "create",
+    "mode": "line",
+    "path": "my_project/hello.txt",
+    "line": 1,
+    "content": "Hello, Craftly Robot!"
+  },
+  {
+    "operation": "delete",
+    "mode": "line",
+    "path": "my_project/hello.txt",
+    "line": 1
+  }
+]
+
