@@ -2,38 +2,26 @@
   {
     "operation": "create",
     "mode": "folder",
-    "path": ["my_project"]
-  },
-  {
-    "operation": "create",
-    "mode": "folder",
-    "path": ["temp_folder"]
-  },
-  {
-    "operation": "delete",
-    "mode": "folder",
-    "path": ["temp_folder"]
+    "path": [
+      "my_project",
+      "my_project/tests"
+    ]
   },
   {
     "operation": "create",
     "mode": "file",
-    "path": ["temp.txt"]
-  },
-  {
-    "operation": "delete",
-    "mode": "file",
-    "path": ["temp.txt"]
-  },
-  {
-    "operation": "create",
-    "mode": "file",
-    "path": ["my_project/hello.py"],
-    "content": "# Starter file\\n"
+    "path": [
+      "my_project/hello.py",
+      "my_project/tests/test_hello.py"
+    ],
+    "content": "# auto-generated file\n"
   },
   {
     "operation": "create",
     "mode": "line",
-    "path": ["my_project/hello.py"],
+    "path": [
+      "my_project/hello.py"
+    ],
     "content": {
       "1": "#!/usr/bin/env python3",
       "2": "def main():",
@@ -44,17 +32,51 @@
     }
   },
   {
+    "operation": "create",
+    "mode": "line",
+    "path": [
+      "my_project/tests/test_hello.py"
+    ],
+    "content": {
+      "1": "import subprocess",
+      "2": "",
+      "3": "result = subprocess.run([\"python3\", \"../hello.py\"], capture_output=True)",
+      "4": "assert result.stdout.strip() == b\"Hello, World!\"",
+      "5": "print(\"Test passed!\")"
+    }
+  },
+  {
     "operation": "delete",
     "mode": "line",
-    "path": ["my_project/hello.py"],
-    "content": [4]
+    "path": [
+      "my_project/tests/test_hello.py"
+    ],
+    "content": [
+      2
+    ]
   },
   {
     "operation": "create",
     "mode": "line",
-    "path": ["my_project/hello.py"],
+    "path": [
+      "my_project/tests/test_hello.py"
+    ],
     "content": {
-      "4": ""
+      "2": ""
     }
+  },
+  {
+    "operation": "delete",
+    "mode": "file",
+    "path": [
+      "my_project/tests/test_hello.py"
+    ]
+  },
+  {
+    "operation": "delete",
+    "mode": "folder",
+    "path": [
+      "my_project/tests"
+    ]
   }
 ]
