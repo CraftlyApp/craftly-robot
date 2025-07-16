@@ -2,26 +2,22 @@
   {
     "operation": "create",
     "mode": "folder",
-    "path": [
-      "my_project",
-      "my_project/tests"
-    ]
+    "path": ["my_project", "trash_dir"]
+  },
+  {
+    "operation": "delete",
+    "mode": "folder",
+    "path": ["trash_dir"]
   },
   {
     "operation": "create",
     "mode": "file",
-    "path": [
-      "my_project/hello.py",
-      "my_project/tests/test_hello.py"
-    ],
-    "content": "# auto-generated file\n"
+    "path": ["my_project/hello.py"]
   },
   {
     "operation": "create",
     "mode": "line",
-    "path": [
-      "my_project/hello.py"
-    ],
+    "path": ["my_project/hello.py"],
     "content": {
       "1": "#!/usr/bin/env python3",
       "2": "def main():",
@@ -32,51 +28,9 @@
     }
   },
   {
-    "operation": "create",
-    "mode": "line",
-    "path": [
-      "my_project/tests/test_hello.py"
-    ],
-    "content": {
-      "1": "import subprocess",
-      "2": "",
-      "3": "result = subprocess.run([\"python3\", \"../hello.py\"], capture_output=True)",
-      "4": "assert result.stdout.strip() == b\"Hello, World!\"",
-      "5": "print(\"Test passed!\")"
-    }
-  },
-  {
     "operation": "delete",
     "mode": "line",
-    "path": [
-      "my_project/tests/test_hello.py"
-    ],
-    "content": [
-      2
-    ]
-  },
-  {
-    "operation": "create",
-    "mode": "line",
-    "path": [
-      "my_project/tests/test_hello.py"
-    ],
-    "content": {
-      "2": ""
-    }
-  },
-  {
-    "operation": "delete",
-    "mode": "file",
-    "path": [
-      "my_project/tests/test_hello.py"
-    ]
-  },
-  {
-    "operation": "delete",
-    "mode": "folder",
-    "path": [
-      "my_project/tests"
-    ]
+    "path": ["my_project/hello.py"],
+    "content": [4]
   }
 ]
